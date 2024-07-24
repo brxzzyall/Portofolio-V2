@@ -10,7 +10,7 @@ export default {
           imageUrl: 'portfolio_v2',
           status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
           tech: 'VueJS 3, Tailwind',
-          github: 'https://github.com/YouLikeADream/Portovolio-V2',
+          github: 'https://github.com/YouLikeADream/Portofolio-V2',
           demo: 'https://ferdiansyah.xyz'
         },
         {
