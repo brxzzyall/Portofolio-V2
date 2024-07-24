@@ -5,15 +5,6 @@ export default {
       activeTab: 1,
       items: [
         {
-          id: 1,
-          name: 'Personal Website',
-          imageUrl: 'portfolio_v1',
-          status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
-          tech: 'HTML, CSS, JS',
-          github: 'https://github.com/YouLikeADream/Portovolio_V1',
-          demo: 'https://portofolio-v1-lilac.vercel.app/'
-        },
-        {
           id: 2,
           name: 'Personal Website',
           imageUrl: 'portfolio_v2',
@@ -21,6 +12,15 @@ export default {
           tech: 'VueJS 3, Tailwind',
           github: 'https://github.com/YouLikeADream/Portovolio_V2',
           demo: 'https://ferdiansyah.xyz'
+        },
+        {
+          id: 1,
+          name: 'Second Personal Website',
+          imageUrl: 'portfolio_v1',
+          status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
+          tech: 'HTML, CSS, JS',
+          github: 'https://github.com/YouLikeADream/Portofolio_V1',
+          demo: 'https://portofolio-v1-lilac.vercel.app/'
         }
         ]
     };
