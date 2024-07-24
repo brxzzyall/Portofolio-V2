@@ -19,7 +19,7 @@ export default {
           imageUrl: 'portfolio_v1',
           status: 'My second personal website, I created this website to display my profile, skills and projects.',
           tech: 'HTML, CSS, JS',
-          github: 'https://github.com/YouLikeADream/Portofolio-V1',
+          github: 'null',
           demo: 'https://portofolio-v1-lilac.vercel.app/'
         }
         ]
