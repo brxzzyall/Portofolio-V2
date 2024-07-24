@@ -6,6 +6,13 @@ export default {
       items: [
         {
           id: 1,
+          name: 'School Website',
+          imageUrl: 'sekolah',
+          status: 'My School Website',
+          demo: 'https://ferdiansyah.xyz'
+        },
+        {
+          id: 2,
           name: 'Personal Website',
           imageUrl: 'portfolio_v2',
           status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
@@ -14,7 +21,7 @@ export default {
           demo: 'https://ferdiansyah.xyz'
         },
         {
-          id: 2,
+          id: 3,
           name: 'Second Personal Website',
           imageUrl: 'portfolio_v1',
           status: 'My second personal website, I created this website to display my profile, skills and projects.',
