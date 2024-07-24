@@ -124,7 +124,7 @@ export default {
         class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center">
         <div class="flex justify-center">
           <img class="w-9/12 rounded-full mb-3 fadein-up"
-            src="https://i.pinimg.com/originals/ed/cb/da/edcbdad0981cbb24e1bc82072d9f65e1.jpg" alt="Foto">
+            src="https://i.pinimg.com/originals/2e/05/ad/2e05ad85b92546062c5c88e3acec6cd1.jpg" alt="Foto">
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
