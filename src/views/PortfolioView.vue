@@ -10,8 +10,8 @@ export default {
           imageUrl: 'portfolio_v1',
           status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
           tech: 'HTML, CSS, JS',
-          github: 'https://github.com/YouLikeADream/Portovolio_V2',
-          demo: 'https://ferdiansyah.xyz'
+          github: 'https://github.com/YouLikeADream/Portovolio_V1',
+          demo: 'https://portofolio-v1-lilac.vercel.app/'
         },
         {
           id: 2,
