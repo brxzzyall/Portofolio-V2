@@ -17,7 +17,7 @@ export default {
           id: 1,
           name: 'Second Personal Website',
           imageUrl: 'portfolio_v1',
-          status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
+          status: 'My second personal website, I created this website to display my profile, skills and projects.',
           tech: 'HTML, CSS, JS',
           github: 'https://github.com/YouLikeADream/Portofolio_V1',
           demo: 'https://portofolio-v1-lilac.vercel.app/'
