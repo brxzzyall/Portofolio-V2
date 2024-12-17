@@ -9,7 +9,7 @@
           <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Ferdiansyah Wurtami();</span>
         </button>
         <div class="flex md:order-2 fadein-bot">
-          <a href="https://github.com/github.com/brxzzyall"><img class="w-9 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github"></a>
+          <a href="https://github.com/github.com/brxzzyall"><img class="w-4 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github"></a>
         </div>
         <div class="flex md:order-2 fadein-bot">
           <a href="https://github.com/github.com/brxzzyall"><img class="w-4 rounded-full" src="https://seeklogo.com/images/G/github-logo-2E3852456C-seeklogo.com.png" alt="github"></a>
