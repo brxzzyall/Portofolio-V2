@@ -25,7 +25,7 @@ export default {
         {
           id: 4,
           name: 'Javascript',
-          imageUrl: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png',
+          imageUrl: 'https://i.pinimg.com/736x/68/d9/1a/68d91a4a0c40857674fbd3a22b9f0b03.jpg',
           status: 'Advance'
         },
         {
@@ -37,7 +37,7 @@ export default {
         {
           id: 6,
           name: 'Codeigniter',
-          imageUrl: 'https://seeklogo.com/images/C/codeigniter-logo-BDF3D666E7-seeklogo.com.png',
+          imageUrl: 'https://i.pinimg.com/736x/49/26/27/4926273b995ea9a6e56a097173e51e4f.jpg',
           status: 'Intermediate'
         },
         {
