@@ -25,7 +25,7 @@
         </svg>Download Resume</button> -->
     </div>
     <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="280" height="300" decoding="async" data-nimg="1"
-        class="w-10/12 md:h-auto rounded-full border-4 border-amber-100 pict" src="https://media-hosting.imagekit.io/442f7817225e424d/Screenshot%202025-05-02%20212039.png">
+        class="w-10/12 md:h-auto rounded-full border-4 border-amber-100 pict" src="https://media-hosting.imagekit.io/442f7817225e424d/Screenshot%202025-05-02%20212039.png?Expires=1840804062&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=p5tzUsLPvlnI5LB~qvGOQmuRTvhHEPVHNEZnfGNOEKYIWT~~ZJQPyGK1~I812aBZT3I6purjpfkUcDPtk2Ff4TiMy9rqLWSc4MD3EKEZa75YAJwg3bylGcLbFnXVk6hUPt~isgHqYQRkVOPpCsT8LImlMiwCG2uDpVw5GtrUbrUA3HSnuCg4HzizRvlTeep3buo1jbw3Kw5YNS57VaWR6fDUJeU37SJM3SiHbwkz02zU8B8WqHAJcrrgNmoeQQTPKOk7JMwUM0Og164dMEUj9rKoOQ1r6kSC1RluV4FIwwKnBomJtU2~HDujpfyzfXTPoQP918xM2hTqoHFzK62gXA__">
     </div>
   </main>
 </template>
