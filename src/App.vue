@@ -6,7 +6,7 @@
     <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <button @click="redirectToHome" class="flex">
-          <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Ferdiansyah Wurtami();</span>
+          <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Ferdiansyah Wurtami -_-</span>
         </button>
         <div class="flex md:order-2 fadein-bot">
           <a href="https://github.com/brxzzyall"><img class="w-9 rounded-full" src="https://i.pinimg.com/736x/cf/5f/7d/cf5f7dca8d30d52a39f4043f3796d7f0.jpg" alt="github"></a>
