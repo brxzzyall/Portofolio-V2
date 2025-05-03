@@ -25,7 +25,7 @@
         </svg>Download Resume</button> -->
     </div>
     <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="280" height="300" decoding="async" data-nimg="1"
-        class="w-10/12 md:h-auto rounded-full border-4 border-amber-100 pict" src="https://vault.pictures/media/images/c2/10/b9/c210b926d6534ff9bf98a16a99d272cc.jpg">
+        class="w-10/12 md:h-auto rounded-full border-4 border-amber-100 pict" src="https://imagekit.io/tools/asset-public-link?detail=%7B%22name%22%3A%22Screenshot%202025-05-02%20212039.png%22%2C%22type%22%3A%22image%2Fpng%22%2C%22signedurl_expire%22%3A%222028-05-01T14%3A27%3A41.549Z%22%2C%22signedUrl%22%3A%22https%3A%2F%2Fmedia-hosting.imagekit.io%2F442f7817225e424d%2FScreenshot%25202025-05-02%2520212039.png%3FExpires%3D1840804062%26Key-Pair-Id%3DK2ZIVPTIP2VGHC%26Signature%3Dp5tzUsLPvlnI5LB~qvGOQmuRTvhHEPVHNEZnfGNOEKYIWT~~ZJQPyGK1~I812aBZT3I6purjpfkUcDPtk2Ff4TiMy9rqLWSc4MD3EKEZa75YAJwg3bylGcLbFnXVk6hUPt~isgHqYQRkVOPpCsT8LImlMiwCG2uDpVw5GtrUbrUA3HSnuCg4HzizRvlTeep3buo1jbw3Kw5YNS57VaWR6fDUJeU37SJM3SiHbwkz02zU8B8WqHAJcrrgNmoeQQTPKOk7JMwUM0Og164dMEUj9rKoOQ1r6kSC1RluV4FIwwKnBomJtU2~HDujpfyzfXTPoQP918xM2hTqoHFzK62gXA__%22%7D">
     </div>
   </main>
 </template>
