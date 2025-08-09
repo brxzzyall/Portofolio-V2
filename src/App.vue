@@ -9,7 +9,7 @@
           <span class="self-center text-lg text-[#ffdb70] font-semibold whitespace-nowrap fadein-bot hover:text-amber-100">Ferdiansyah Wurtami -_-</span>
         </button>
         <div class="flex md:order-2 fadein-bot">
-          <a href="https://github.com/brxzzyall"><img class="w-9 rounded-full" src="https://i.pinimg.com/736x/cf/5f/7d/cf5f7dca8d30d52a39f4043f3796d7f0.jpg" alt="github"></a>
+          <a href="https://instagram.com/brxzzyall"><img class="w-9 rounded-full" src="https://images.seeklogo.com/logo-png/28/1/instagram-glyph-logo-png_seeklogo-286192.png" alt="github"></a>
         </div>
         <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
           <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
