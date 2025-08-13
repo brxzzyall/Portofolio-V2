@@ -11,7 +11,7 @@ export default {
           status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
           tech: 'VueJS 3, Tailwind',
           github: 'https://github.com/YouLikeADream/Portofolio-V2',
-          demo: 'https://ferdiansyah.xyz'
+          demo: 'https://ferdiansyah.vercel.app'
         },
         {
           id: 2,
@@ -21,6 +21,15 @@ export default {
           tech: 'HTML, CSS, JS',
           github: 'null',
           demo: 'https://portofolio-v1-lilac.vercel.app/'
+        },
+        {
+          id: 3,
+          name: 'Rumah Amma Soppeng',
+          imageUrl: 'rumahammasoppeng',
+          status: 'Rumah Amma Soppeng Selling Delicious and Affordable Meatball Soup Coto in Makassar.',
+          tech: 'HTML, CSS, JS',
+          github: 'null',
+          demo: 'https://rumahammasoppeng.vercel.app'
         }
         ]
     };
