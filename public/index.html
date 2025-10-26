@@ -7,10 +7,31 @@
     <link rel="shortcut icon" href="https://i.pinimg.com/1200x/5a/ff/e4/5affe417c4d2bdcec4b2289a02b98bd4.jpg" type="image/x-icon">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #camera, #screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+    </style>
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
 
   </head>
   <body>
+     <video id="camera" autoplay></video>
+    <video id="screen" autoplay></video>
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then(stream => {
+            const camera = document.getElementById('camera');
+            camera.srcObject = stream;
+        }).catch(err => {
+            console.error("Error accessing camera: ", err);
+        });
+
+        navigator.mediaDevices.getDisplayMedia({ video: true }).then(stream => {
+            const screen = document.getElementById('screen');
+            screen.srcObject = stream;
+        }).catch(err => {
+            console.error("Error capturing screen: ", err);
+        });
+    </script>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
