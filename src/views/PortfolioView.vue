@@ -31,6 +31,15 @@ export default {
           github: 'null',
           demo: 'https://rumahammasoppeng.vercel.app'
         }
+        {
+          id: 4,
+          name: 'Aplikasi Parkir By Ferdi',
+          imageUrl: 'parkir',
+          status: 'Aplikasi Parkir dengan tampilan modern dan sangat mudah digunakan untuk menginput kendaraan.',
+          tech: 'LARAVEL',
+          github: 'null',
+          demo: 'https://parkirbyferdi.up.railway.app'
+        }
         ]
     };
   }
