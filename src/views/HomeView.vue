@@ -24,8 +24,8 @@
           </path>
         </svg>Download Resume</button> -->
     </div>
-    <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="280" height="150" decoding="async" data-nimg="1"
-        class="w-10/12 md:h-auto rounded-full border-4 border-amber-100 pict" src="https://i.ibb.co.com/V0Vt1RPp/Whats-App-Image-2025-07-17-at-00-26-26-ae995226.jpg">
+    <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="280" height="280" decoding="async" data-nimg="1"
+        class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-amber-100 pict" src="https://i.pinimg.com/736x/aa/df/1a/aadf1a48121fef99908b96aadf198a5a.jpg">
     </div>
   </main>
 </template>

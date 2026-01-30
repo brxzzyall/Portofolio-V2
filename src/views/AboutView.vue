@@ -123,8 +123,8 @@ export default {
       <section
         class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center">
         <div class="flex justify-center">
-          <img class="w-9/12 rounded-full mb-3 fadein-up"
-            src="https://i.pinimg.com/564x/e7/8b/aa/e78baa3a73280bbedf3f87da6938c716.jpg" alt="Foto">
+          <img class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full mb-3 fadein-up"
+            src="https://i.pinimg.com/736x/f6/19/86/f61986a60cbb22e0ce44b51f767fef81.jpg" alt="Foto">
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
